@@ -47,23 +47,26 @@ li {
 }
 
 a {
-  color: white;
+  color: #FFF8EB;
   text-decoration: none;
+  font-size: 16px;
 }
 
 a:hover {
-  color: rgb(101, 21, 13);
+  color: #6E1919;
   transition: 0.3s all;
 }
 
 #comprar-btn {
-  border: 2px solid rgb(101, 21, 13);
-  padding: 10px 15px;
-  border-radius: 15px;
+  color: #0B3910;
+  background-color: #FFF8EB;
+  border: 2px solid #FFF8EB;
+  padding: 2px 12px;
+  border-radius: 8px;
 }
 
 #comprar-btn:hover {
-  background-color: rgb(101, 21, 13);
+  background-color: #0B3910;
   color: white;
   transition: 0.3s;
 }
@@ -115,6 +118,6 @@ a:hover {
 }
 
 .texto-capa p {
-  font-size: 20px;
+  font-size: 24px;
   color: #ddd;
 }
