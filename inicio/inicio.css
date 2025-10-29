@@ -7,7 +7,7 @@
 body {
   background-color: rgb(34,34,34);
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: "Corben", serif;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -120,4 +120,98 @@ a:hover {
 .texto-capa p {
   font-size: 24px;
   color: #ddd;
+}
+
+/* ======== SEÇÕES PRINCIPAIS ======== */
+.secao {
+  display: flex;
+  width: 100%;
+  height: 70vh; /* ocupa boa parte da tela */
+  overflow: hidden;
+}
+
+/* Metade com o texto */
+.secao .texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  color: white;
+}
+
+/* Metade com a imagem */
+.secao .imagem {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ======== CORES E IMAGENS ======== */
+.secao1 .texto {
+  background-color: #5a189a;
+}
+.secao1 .imagem {
+  background-image: url('/1imgs/educacao.jpg');
+}
+
+.secao2 .texto {
+  background-color: #1e1e70;
+}
+.secao2 .imagem {
+  background-image: url('/1imgs/esporte.jpg');
+}
+
+.secao3 .texto {
+  background-color: #146c43;
+}
+.secao3 .imagem {
+  background-image: url('/1imgs/saude.jpg');
+}
+
+.secao4 .texto {
+  background-color: #7a1a1a;
+}
+.secao4 .imagem {
+  background-image: url('/1imgs/comunidade.jpg');
+}
+
+/* ======== TEXTO ======== */
+.secao h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.secao p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* ======== ALTERNAR LADOS ======== */
+.secao2, .secao4 {
+  flex-direction: row-reverse; /* imagem à esquerda */
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 900px) {
+  .secao {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .secao .texto {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .secao .imagem {
+    width: 100%;
+    height: 300px;
+  }
+
+  .secao p {
+    max-width: 100%;
+  }
 }
