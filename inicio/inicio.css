@@ -17,23 +17,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute; /* Fica sobre a imagem */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 60px;
   z-index: 10;
   font-family: "Corben", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 #title h1 {
   font-size: 28px;
   color: white;
-  font-family: "Corben", serif;
-  font-weight: 700;
-  font-style: normal;
   letter-spacing: 5px;
 }
 
@@ -75,15 +70,28 @@ a:hover {
 .capa {
   position: relative;
   width: 100%;
-  height: 100vh; /* Ocupa a altura toda da tela */
+  height: 100vh; /* ou o tamanho que você já usa */
+  background-image: url('sua-imagem.jpg');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
+}
+
+.capa::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  pointer-events: none; /* não interfere nos cliques */
 }
 
 .imgcapa {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Mantém o enquadramento da imagem */
-  filter: brightness(70%); /* leve escurecida base */
+  object-fit: cover;
 }
 
 .filtro {
@@ -92,14 +100,13 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0); /* filtro mais escuro */
+  background-color: rgba(0,0,0,0);
   z-index: 1;
 }
 
-/* ======== TEXTO CENTRALIZADO ======== */
 .texto-capa {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -108,110 +115,60 @@ a:hover {
 
 .texto-capa h2 {
   font-size: 64px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  font-family: "Corben", serif;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: 5px;
-
+  font-weight: 200;
+  letter-spacing: 8px;
+  line-height: 6rem;
 }
 
 .texto-capa p {
   font-size: 24px;
-  color: #ddd;
+  color: #eaeaea;
+  margin-top: 15px;
 }
 
-/* ======== SEÇÕES PRINCIPAIS ======== */
-.secao {
+/* ======== SEÇÃO 1 ======== */
+.secao1 {
   display: flex;
+  height: 90vh;
   width: 100%;
-  height: 70vh; /* ocupa boa parte da tela */
-  overflow: hidden;
 }
 
-/* Metade com o texto */
-.secao .texto {
+.secao1 .texto {
   flex: 1;
+  background-color: #FFF8EB;
+  color: #1e1e1e;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 60px;
-  color: white;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
-/* Metade com a imagem */
-.secao .imagem {
+.secao1 .imagem {
   flex: 1;
+  background-image: url('/1imgs/planta.jpg');
   background-size: cover;
   background-position: center;
 }
 
-/* ======== CORES E IMAGENS ======== */
-.secao1 .texto {
-  background-color: #5a189a;
-}
-.secao1 .imagem {
-  background-image: url('/1imgs/educacao.jpg');
-}
-
-.secao2 .texto {
-  background-color: #1e1e70;
-}
-.secao2 .imagem {
-  background-image: url('/1imgs/esporte.jpg');
-}
-
-.secao3 .texto {
-  background-color: #146c43;
-}
-.secao3 .imagem {
-  background-image: url('/1imgs/saude.jpg');
-}
-
-.secao4 .texto {
-  background-color: #7a1a1a;
-}
-.secao4 .imagem {
-  background-image: url('/1imgs/comunidade.jpg');
-}
-
-/* ======== TEXTO ======== */
-.secao h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.secao p {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 500px;
-}
-
-/* ======== ALTERNAR LADOS ======== */
-.secao2, .secao4 {
-  flex-direction: row-reverse; /* imagem à esquerda */
-}
-
 /* ======== RESPONSIVIDADE ======== */
 @media (max-width: 900px) {
-  .secao {
+  .secao1 {
     flex-direction: column;
     height: auto;
   }
 
-  .secao .texto {
-    width: 100%;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .secao .imagem {
+  .secao1 .imagem {
     width: 100%;
     height: 300px;
   }
 
-  .secao p {
-    max-width: 100%;
+  .texto-capa h2 {
+    font-size: 42px;
+  }
+
+  .texto-capa p {
+    font-size: 18px;
   }
 }
