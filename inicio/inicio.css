@@ -1,174 +1,168 @@
+/* ======= RESET ======= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(34,34,34);
-  color: white;
-  font-family: "Corben", serif;
-  max-width: 100%;
-  overflow-x: hidden;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #222;
+    overflow-x: hidden;
 }
 
-/* ======== CABEÇALHO ======== */
-.cabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 60px;
-  z-index: 10;
-  font-family: "Corben", serif;
-}
-
-#title h1 {
-  font-size: 28px;
-  color: white;
-  letter-spacing: 5px;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-a {
-  color: #FFF8EB;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-a:hover {
-  color: #6E1919;
-  transition: 0.3s all;
-}
-
-#comprar-btn {
-  color: #0B3910;
-  background-color: #FFF8EB;
-  border: 2px solid #FFF8EB;
-  padding: 2px 12px;
-  border-radius: 8px;
-}
-
-#comprar-btn:hover {
-  background-color: #0B3910;
-  color: white;
-  transition: 0.3s;
-}
-
-/* ======== CAPA ======== */
-.capa {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* ou o tamanho que você já usa */
-  background-image: url('sua-imagem.jpg');
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-
-.capa::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
-  pointer-events: none; /* não interfere nos cliques */
-}
-
-.imgcapa {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.filtro {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0);
-  z-index: 1;
-}
-
-.texto-capa {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
-}
-
-.texto-capa h2 {
-  font-size: 64px;
-  font-weight: 200;
-  letter-spacing: 8px;
-  line-height: 6rem;
-}
-
-.texto-capa p {
-  font-size: 24px;
-  color: #eaeaea;
-  margin-top: 15px;
-}
-
-/* ======== SEÇÃO 1 ======== */
-.secao1 {
-  display: flex;
-  height: 90vh;
-  width: 100%;
-}
-
-.secao1 .texto {
-  flex: 1;
-  background-color: #FFF8EB;
-  color: #1e1e1e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-.secao1 .imagem {
-  flex: 1;
-  background-image: url('/1imgs/planta.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-/* ======== RESPONSIVIDADE ======== */
-@media (max-width: 900px) {
-  .secao1 {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .secao1 .imagem {
+/* =========================================================
+   ====================  NAVBAR  ============================
+   ========================================================= */
+.navbar {
     width: 100%;
-    height: 300px;
-  }
+    height: 100px; /* altura igual ao Wix */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px; /* espaçamento igual ao print */
+    z-index: 1000;
+}
 
-  .texto-capa h2 {
-    font-size: 42px;
-  }
+.logo {
+    font-family: "Corben", serif;
+    font-size: 30px;
+    letter-spacing: 12px; /* igual ao print */
+    color: white;
+}
 
-  .texto-capa p {
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaçamento maior, igual ao Wix */
+}
+
+.menu a {
+    color: white;
     font-size: 18px;
-  }
+    text-decoration: none;
+}
+
+.btn-comprar {
+    background: white;
+    color: black;
+    padding: 10px 26px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* =========================================================
+   ====================  CAPA (HERO)  ========================
+   ========================================================= */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url("imgs/capa.avif") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay escuro igual ao Wix (não é degradê) */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    margin-top: -40px; /* puxa o texto um pouco para cima, igual ao print */
+}
+
+.hero-text h1 {
+    font-family: "Corben", serif;
+    font-size: 72px; /* maior e mais elegante */
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+    margin-top: 22px;
+    opacity: 0.95;
+}
+
+/* =========================================================
+   ====================  SEÇÕES =============================
+   ========================================================= */
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+    width: 100%;
+}
+
+/* ----- SEÇÃO BEGE ----- */
+.section-left {
+    background-color: #f0e7d8;
+}
+
+.text-box {
+    width: 50%;
+    padding: 80px;
+    display: flex;
+    gap: 30px;
+}
+
+.vertical-bar {
+    width: 6px;
+    background: #1a3328;
+}
+
+.text-box p {
+    font-size: 20px;
+    line-height: 1.7;
+    width: 85%;
+}
+
+/* ----- IMAGENS DAS SEÇÕES ----- */
+.section-img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----- SEÇÕES VERDES ----- */
+.dark {
+    background: #0B3910;
+    color: white;
+}
+
+.text-area {
+    width: 50%;
+    padding: 80px;
+}
+
+.text-area h2 {
+    font-family: "Corben", serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.text-area p {
+    font-size: 20px;
+    line-height: 1.7;
 }
