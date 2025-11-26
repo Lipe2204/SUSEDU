@@ -1,54 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SUSEDU</title>
-  <link rel="stylesheet" href="/inicio/inicio.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAFE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- CABEÇALHO -->
-  <header class="cabecalho">
-    <div id="title">
-      <a class="link-inicio" href="inicio.html"><h1>LAFE</h1></a>
-    </div>
-    <ul>
-      <a href="inicio.html"><li>Início</li></a>
-      <a href="sobre.html"><li>Sobre</li></a>
-      <a href="comprar.html" id="comprar-btn"><li>Comprar</li></a>
-    </ul>
-  </header>
+    <!-- =========================================================
+         ======================== NAVBAR ===========================
+         ========================================================= -->
+    <header class="navbar">
+        <div class="logo">L A F E</div>
 
-  <!-- CAPA (igual ao print do site Wix) -->
-  <section class="capa">
-    <img src="/1imgs/imgcapa.avif" alt="Folha com gotas" class="imgcapa">
-    <div class="filtro"></div>
-    <div class="texto-capa">
-      <h2>SUSTENTABILIDADE<br>NA EDUCAÇÃO</h2>
-      <p>Formando mentes que cuidam do futuro</p>
-    </div>
-  </section>
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <button class="btn-comprar">Comprar</button>
+        </nav>
+    </header>
 
-  <!-- SEÇÃO 1 - Texto + Imagem -->
-  <section class="secao secao1">
-    <div class="texto">
-      <p>
-        A sustentabilidade na educação é crucial para formar cidadãos conscientes e responsáveis.
-        Integrar práticas sustentáveis nas escolas, como a redução de desperdício e o uso responsável de recursos,
-        contribui para a preservação do meio ambiente. Além disso, a educação ambiental deve ser abordada de forma transversal,
-        promovendo a compreensão das questões ecológicas, sociais e econômicas. Ao ensinar essas práticas,
-        as escolas podem inspirar estudantes a adotar hábitos sustentáveis no dia a dia. Esse enfoque prepara
-        as futuras gerações para enfrentar os desafios ambientais, promovendo um futuro mais equilibrado e justo para todos.
-      </p>
-    </div>
-    <div class="imagem">
-      <img src="/1imgs/imgsec1.avif" alt="Folha com gotas" class="imgcapa">
-    </div>
-  </section>
+
+
+    <!-- =========================================================
+         ========================== CAPA ============================
+         ========================================================= -->
+    <section id="inicio" class="hero">
+        <div class="hero-text">
+            <h1>SUSTENTABILIDADE<br>NA EDUCAÇÃO</h1>
+            <p>Formando mentes que cuidam do futuro</p>
+        </div>
+    </section>
+
+
+
+    <!-- =========================================================
+         ======================== SEÇÃO 1 ==========================
+         ========================================================= -->
+    <section id="sobre" class="section section-left">
+        <div class="text-box">
+            <div class="vertical-bar"></div>
+            <p>
+                A sustentabilidade na educação é crucial para formar cidadãos conscientes e responsáveis.
+                Integrar práticas sustentáveis nas escolas, como a redução de desperdício e o uso responsável
+                de recursos, contribui para a preservação do meio ambiente. Além disso, a educação ambiental
+                deve ser abordada de forma transversal, promovendo a compreensão das questões ecológicas,
+                sociais e econômicas. Ao ensinar essas práticas, as escolas podem inspirar estudantes a 
+                adotar hábitos sustentáveis no dia a dia.
+            </p>
+        </div>
+
+        <img src="imgs/sec1.avif" class="section-img">
+    </section>
+
+
+
+    <!-- =========================================================
+         ======================== SEÇÃO 2 ==========================
+         ========================================================= -->
+    <section class="section dark">
+        <img src="imgs/sec2.avif" class="section-img">
+
+        <div class="text-area">
+            <h2>O Primeiro Passo</h2>
+            <p>
+                Introduzir a educação ambiental nas escolas é essencial para sensibilizar os alunos sobre os
+                impactos de nossas ações no planeta. Atividades práticas como hortas escolares, reciclagem e
+                coleta seletiva ajudam os estudantes a entender a importância de preservar os recursos naturais.
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- =========================================================
+         ======================== SEÇÃO 3 ==========================
+         ========================================================= -->
+    <section class="section dark">
+        <div class="text-area">
+            <h2>Tecnologia e Sustentabilidade</h2>
+            <p>
+                O uso de tecnologias digitais pode ser uma grande aliada na sustentabilidade. Mesmo reduzindo 
+                o uso de papel e possibilitando acesso remoto, as tecnologias também ampliam oportunidades de 
+                ensino de forma inclusiva e sustentável.
+            </p>
+        </div>
+
+        <img src="imgs/sec3.avif" class="section-img">
+    </section>
+
+
+
+    <!-- =========================================================
+         ======================== SEÇÃO 4 ==========================
+         ========================================================= -->
+    <section class="section dark">
+        <img src="imgs/sec4.avif" class="section-img">
+
+        <div class="text-area">
+            <h2>Uma abordagem diferente para um futuro diferente</h2>
+            <p>
+                Vivemos em um planeta onde as condições ideais para a vida se alinharam de maneira rara. 
+                Cuidar do meio ambiente parece um dever diante de algo tão extraordinariamente complexo.
+            </p>
+        </div>
+    </section>
 
 </body>
 </html>
