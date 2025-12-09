@@ -12,45 +12,68 @@ body {
     overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* =========================================================
+   ====================  NAVBAR  ============================
+   ========================================================= */
 .navbar {
     width: 100%;
-    height: 100px;
+    font-family: "Corben", serif;
+    height: 100px; /* altura igual ao Wix */
     position: fixed;
     top: 0;
-    background: #192f13;
+    left: 0;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 80px; /* espaçamento igual ao print */
     z-index: 1000;
 }
 
 .logo {
     font-family: "Corben", serif;
-    font-size: 30px;
-    letter-spacing: 12px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.35px; /* igual ao print */
     color: white;
 }
 
 .menu {
     display: flex;
-    gap: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 50;
+    align-items: center;
+    gap: 50px; /* Espaçamento maior, igual ao Wix */
+}
+
+.menu a:hover {
+    color: #6E1919;
+    transition: 0.3s;
 }
 
 .menu a {
     color: white;
-    text-decoration: none;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .btn-comprar {
     background: white;
     color: black;
-    padding: 10px 26px;
-    border-radius: 6px;
-    border: none;
+    padding: 10px 40px;
+    font-size: 16px;
     cursor: pointer;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+}
+
+.btn-comprar:hover {
+    background-color: #6E1919;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    transition: 0.3s;
 }
 
 /* CAPA */
@@ -165,4 +188,75 @@ body {
     .foto {
         width: 80%;
     }
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+    width: 100%;
+    background: #0B3910;
+    padding: 50px 100px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1500px;
+}
+
+/* LOGO DO FOOTER */
+.footer-logo {
+    font-family: "Corben", serif;
+    font-size: 20px;
+    letter-spacing: 0.35px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+/* COLUNAS DO FOOTER */
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+/* COLUNAS DE TEXTO */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.footer-col a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.04px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer-col p {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.04px;
+    transition: 0.3s ease;
+}
+
+.footer-col a:hover {
+    opacity: 0.75;
+}
+
+/* MAPA */
+.footer-map iframe {
+    width: 420px;
+    height: 220px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px rgba(0,0,0,0.45);
 }
